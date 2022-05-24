@@ -60,7 +60,7 @@ P_ss_self = ss(A_ss, B_ss, C_ss, D_ss); %forms the state space function for the 
 
 P_self = zpk(P_ss_self) %zero pole gain of system, transfer function
 
-save linearizedModel_Outputs %save the variables here named 'linearizedModel_Outputs'
+save linearizedModel_Outputs.mat X0 Y0 U0 P_self P_ss_self  %save the variables here named 'linearizedModel_Outputs'
 
 %% Plotting the diagrams for the Plant
 om_rad = logspace (-2, 5 , 1001); %logspace 10^(-3) to 10^3 in 1001 steps
